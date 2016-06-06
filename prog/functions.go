@@ -79,6 +79,7 @@ func Rangeloop() {
 }
 
 // Check whether a number is prime or not
+
 func CheckPrime(a int) string {
 	for i := 2; i < a; i++ {
 		if a >= i {

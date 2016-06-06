@@ -1,25 +1,25 @@
-package main
+package prog
+
 import "fmt"
-func sam(i int ) string {
-	
-	p:= &i
-	fmt.Println(i,*p,p)
+
+func sam(i int) string {
+
+	p := &i
+	fmt.Println(i, *p, p)
 	*p = 21
 
-	fmt.Printf("ths sfds %v",i)
+	fmt.Printf("ths sfds %v", i)
 	return "Done"
 }
 
-
-
- // commandline input 
-func input()  {
+// commandline input
+func input() {
 	var a int
 	fmt.Println("Enter a number")
-	fmt.Scanf("%v",&a)
+	fmt.Scanf("%v", &a)
 	fmt.Printf("Entered number is %v \n", a)
 }
-func main(){
+func main() {
 	// sam(13)
 	// array()
 	input()

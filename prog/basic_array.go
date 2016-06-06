@@ -1,4 +1,6 @@
-package main
+package prog
+
+import "fmt"
 
 func array_basic() {
 	// this array has default value as 0,0,0 // we can reassign value and the same is going on in the below function
