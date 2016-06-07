@@ -2,9 +2,7 @@ package prog
 
 import "fmt"
 
-// if arrguments have same data type then we can combine thier data type
-// func sum(a int, b int)
-
+// Sum does xyz
 func Sum(a, b int) int {
 	//using printf to print the variable within string and in the last of string mentioning \n to move the cursor in next line
 	fmt.Printf("Sum of %v and %T is = %v\n", a, b, a+b)
@@ -12,6 +10,7 @@ func Sum(a, b int) int {
 	return a + b
 }
 
+//Table requries an interger and return an int as well, basically process the table of entered int
 func Table(a int) int {
 	i := 1
 	// Declaring the C outside the block because it would be required outside the block to return value
@@ -24,6 +23,7 @@ func Table(a int) int {
 	return c
 }
 
+//OddEven requires an int and return a string by calculating that entered number is odd or even
 func OddEven(a int) string {
 	if a%2 == 0 {
 		fmt.Printf("Number %v is Even\n", a)
@@ -34,7 +34,7 @@ func OddEven(a int) string {
 	return "Odd"
 }
 
-func Test() {
+func test() {
 	// this function is written to understand the difference between Print functions.
 	var a, b int = 19, 20
 	// z := 14.0
@@ -46,7 +46,7 @@ func Test() {
 }
 
 // Golang also supports the multiple return type values
-func Swap(a, b int) (int, int) {
+func swap(a, b int) (int, int) {
 	fmt.Println(b, a)
 	return a, b
 }
@@ -59,7 +59,7 @@ func Swap(a, b int) (int, int) {
 // return i
 // }
 
-func ForLoop() {
+func forLoop() {
 	for i := 1; i <= 9; i++ {
 		j := 1
 		for j <= i {
@@ -70,7 +70,7 @@ func ForLoop() {
 	}
 }
 
-func Rangeloop() {
+func rangeloop() {
 	num := [5]int{1, 2, 3, 4, 5}
 	for i, x := range num {
 		fmt.Printf("Value of x = %d and i = %d \n", x, i)
@@ -80,7 +80,7 @@ func Rangeloop() {
 
 // Check whether a number is prime or not
 
-func CheckPrime(a int) string {
+func checkPrime(a int) string {
 	for i := 2; i < a; i++ {
 		if a >= i {
 			if a%i == 0 {
@@ -95,7 +95,7 @@ func CheckPrime(a int) string {
 }
 
 // we can return the named vaules
-func NamedValue(a int) (sum int) {
+func namedValue(a int) (sum int) {
 	sum = 10
 	sum = sum * a
 	fmt.Println(sum)
@@ -103,9 +103,10 @@ func NamedValue(a int) (sum int) {
 }
 
 // To understand typecasting
-func Conversion() {
-
-	var a int = 10
+func conversion() {
+	// below statement is commented use to remove warning
+	// var a int = 10
+	var a = 10
 	var b float32 = 12.22
 	var sum int
 	sum = a + int(b)
@@ -113,7 +114,7 @@ func Conversion() {
 }
 
 // Make variables constant
-func Constant() {
+func constant() {
 	const (
 		z, j int    = 44, 55
 		x    int    = 1
@@ -123,13 +124,13 @@ func Constant() {
 
 	fmt.Println(z, j, name, x)
 	const i int = 12
-	var b int = 1
+	var b = 1
 	// i = i+b  // const declaration error
 	fmt.Println(i, b)
 }
 
 // Simple infinite for loop it is easys
-func ForEver() {
+func forEver() {
 	for {
 		fmt.Println("samarpi")
 
